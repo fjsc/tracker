@@ -8,7 +8,7 @@ const pkg = require('./package.json')
 
 
 export default {
-  input: 'src/tracker.ts',
+  input: 'src/index.ts',
   output: [
     { file: pkg.main, name: 'tracker', format: 'umd', sourcemap: true },
     { file: pkg.module, format: 'es', sourcemap: true },
@@ -31,6 +31,6 @@ export default {
     resolve(),
 
     // Resolve source maps to the original source
-    sourceMaps(),
+    sourceMaps()
   ],
 }
