@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "moduleResolution": "node",
     "target": "es5",
     "module":"es2015",
@@ -11,12 +12,23 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "declarationDir": "dist/types",
+    "suppressImplicitAnyIndexErrors": true,
     "outDir": "dist/lib",
     "typeRoots": [
-      "node_modules/@types"
-    ]
+      "node_modules/@types",
+      "./globals"
+    ],
+    "paths": {
+      "touchai-angular-lib": [
+        "dist/touchai-angular-lib"
+      ],
+      "touchai-angular-lib/*": [
+        "dist/touchai-angular-lib/*"
+      ]
+    }
   },
   "include": [
-    "src"
+    "src",
+    "src/**/*.d.ts"
   ]
 }
